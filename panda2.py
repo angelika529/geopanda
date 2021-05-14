@@ -68,3 +68,57 @@ print('Przedział wiekowy 0-14:', a, '\n'
       'Przedział wiekowy >65:', c, '\n'
       'Ludność męska w przedziałach wiekowych a-c:', d, '\n'
       'Ludność żeńska w przedziałach wiekowych a-c:', e)
+
+gdf2 = geopandas.read_file('wojewodztwa')
+
+slaskie = (gdf2.area[0]) / 1000000
+opolskie = (gdf2.area[1])/1000000
+swietokrzyskie = (gdf2.area[2])/1000000
+pomorskie = (gdf2.area[3])/1000000
+podlaskie = (gdf2.area[4])/1000000
+zachodniopomorskie = (gdf2.area[5])/1000000
+dolnoslaskie = (gdf2.area[6])/1000000
+wielkopolskie = (gdf2.area[7])/1000000
+podkarpackie = (gdf2.area[8])/1000000
+malopolskie = (gdf2.area[9])/1000000
+warminsko_mazurskie = (gdf2.area[10])/1000000
+lodzkie = (gdf2.area[11])/1000000
+mazowieckie = (gdf2.area[12])/1000000
+kujawsko_pomorskie = (gdf2.area[13])/1000000
+lubelskie = (gdf2.area[14])/1000000
+lubuskie = (gdf2.area[15])/1000000
+
+f = [ludn/slaskie,
+     ludn/opolskie,
+     ludn/swietokrzyskie,
+     ludn/pomorskie,
+     ludn/podlaskie,
+     ludn/zachodniopomorskie,
+     ludn/dolnoslaskie,
+     ludn/wielkopolskie,
+     ludn/podkarpackie,
+     ludn/malopolskie,
+     ludn/warminsko_mazurskie,
+     ludn/lodzkie,
+     ludn/mazowieckie,
+     ludn/kujawsko_pomorskie,
+     ludn/lubelskie,
+     ludn/lubuskie]
+
+print('Ratio liczby ludności do powierzchni dla województwa:', '\n'
+      'śląskiego:', int(f[0]), '\n'
+      'opolskiego:', int(f[1]), '\n
+      'świętokrzyskiego:', int(f[2]), '\n'
+      'pomorskiego:', int(f[3]), '\n
+      'podlaskiego:', int(f[4]), '\n'
+      'zachodniopomorsiego:', int(f[5]), '\n'
+      'dolnośląskiego:', int(f[6]), '\n'
+      'wielkopolskiego:', int(f[7]), '\n'
+      'podkarpackiego:', int(f[8]), '\n'
+      'małopolskiego:', int(f[9]), '\n'
+      'warmińsko-mazurskiego:', int(f[10]), '\n'
+      'Łódzkiego:', int(f[11]), '\n'
+      'mazowieckiego:', int(f[12]), '\n'
+      'kujawsko pomorskiego:', int(f[13]), '\n'
+      'lubelskiego:', int(f[14]), '\n'
+      'lubuskiego:', int(f[15]))
